@@ -19,14 +19,12 @@ CSINodeInfo: true
 CSIDriverRegistry: true
 BlockVolume: true
 CSIBlockVolume: true" >> /var/lib/kubelet/config.yaml
-```{{execute HOST1}}
+```{{execute HOST2}}
 
-`scp /etc/kubernetes/admin.conf root@node01:~`{{execute HOST1}}
 
 ## Update kubelet service
-vi /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
+On startup of kubelet service we also need to set the CSI flags
 
---allow-privileged=true --feature-gates=VolumeSnapshotDataSource=true,KubeletPluginsWatcher=true,CSINodeInfo=true,CSIDriverRegistry=true,BlockVolume=true,CSIBlockVolume=true
 `patch /etc/systemd/system/kubelet.service.d/10-kubeadm.conf 10-kubeadm.conf.patch`{{execute HOST1}}
 
 `patch /etc/systemd/system/kubelet.service.d/10-kubeadm.conf 10-kubeadm.conf.patch`{{execute HOST2}}
