@@ -30,12 +30,6 @@
                     "file": "10-kubeadm.conf.patch",
                     "target": "/root"
                 }
-            ],
-            "host02": [
-                {
-                    "file": "10-kubeadm.conf.patch",
-                    "target": "/root"
-                }
             ]
         }
     },
