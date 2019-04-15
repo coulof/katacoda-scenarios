@@ -12,8 +12,12 @@
                 "text": "step1.md"
             },
             {
-                "title": "Step 1 - Configure kubelet",
+                "title": "Step 2 - Configure kubelet & docker",
                 "text": "step2.md"
+            },
+            {
+                "title": "Step 3 - Configure master services",
+                "text": "step3.md"
             }
         ],
         "intro": {

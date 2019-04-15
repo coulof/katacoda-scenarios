@@ -1,7 +1,8 @@
-In this step we will enable the CSI flags
+In this step we will enable the CSI flags.
+These steps have to be done on EVERY nodes of your cluster (master and workers)
 
 ## Update kubelet configuration
-On master :
+
 ```
 echo "VolumeSnapshotDataSource: true
 KubeletPluginsWatcher: true
@@ -9,22 +10,11 @@ CSINodeInfo: true
 CSIDriverRegistry: true
 BlockVolume: true
 CSIBlockVolume: true" >> /var/lib/kubelet/config.yaml
-```{{execute HOST1}}
-
-On minion:
-```
-echo "VolumeSnapshotDataSource: true
-KubeletPluginsWatcher: true
-CSINodeInfo: true
-CSIDriverRegistry: true
-BlockVolume: true
-CSIBlockVolume: true" >> /var/lib/kubelet/config.yaml
-```{{execute HOST2}}
-
+```{{execute}}
 
 ## Update kubelet service
 On startup of kubelet service we also need to set the CSI flags
+`cat 10-kubeadm.conf.patch`{{execute}}
+`patch /etc/systemd/system/kubelet.service.d/10-kubeadm.conf 10-kubeadm.conf.patch`{{execute}}
 
-`patch /etc/systemd/system/kubelet.service.d/10-kubeadm.conf 10-kubeadm.conf.patch`{{execute HOST1}}
-
-`patch /etc/systemd/system/kubelet.service.d/10-kubeadm.conf 10-kubeadm.conf.patch`{{execute HOST2}}
+## Update docker
