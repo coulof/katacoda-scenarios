@@ -1,22 +1,13 @@
-Kubeadm has been installed on the nodes. Packages are available for Ubuntu 16.04+, CentOS 7 or HypriotOS v1.0.1+.
-
-The first stage of initialising the cluster is to launch the master node. The master is responsible for running the control plane components, etcd and the API server. Clients will communicate to the API to schedule workloads and manage the state of the cluster.
-
-## Task
-
-Pre-requisites:
-`ssh node01`{{execute HOST1}}
-
-The command below will initialise the cluster with a known token to simplify the following steps.
-
-`kubeadm init --token=102952.1a7dd4cc8d1f4cc5`{{execute HOST1}}
-
-In production, it's recommend to exclude the token causing kubeadm to generate one on your behalf.
-
-## Bonus to save time
-`docker pull couchbase/server:enterprise-5.5.1 ; docker pull bauagonzo/cb-travel-sample:latest`{{execute HOST2}}
+Kubernetes Container Storage Interface is GA since version 1.13.
 
 
-`curl -LO https://github.com/bauagonzo/katacoda-scenarios/raw/master/techy-friday-kubernetes/assets/couchbase/bin/cbopctl ; curl -LO https://github.com/bauagonzo/katacoda-scenarios/raw/master/techy-friday-kubernetes/assets/couchbase/bin/cbopinfo`{{execute HOST1}}
+## Start the cluster
+`launch.sh`{{execute}}
 
-`chmod +x cbop* && mv cbop* /usr/bin`{{execute HOST1}}
+This will create a two node Kubernetes cluster using WeaveNet for networking.
+
+## Health Check
+
+`
+kubectl cluster-info
+`{{execute}}
