@@ -8,8 +8,12 @@
     "details": {
         "steps": [
             {
-                "title": "Step 1 - Initialise Master",
+                "title": "Step 1 - Launch kubernetes",
                 "text": "step1.md"
+            },
+            {
+                "title": "Step 1 - Configure kubelet",
+                "text": "step2.md"
             }
         ],
         "intro": {
