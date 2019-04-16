@@ -33,6 +33,22 @@
                 {
                     "file": "10-kubeadm.conf.patch",
                     "target": "/root"
+                },
+                {
+                    "file": "kube-apiserver.yaml.patch",
+                    "target": "/root"
+                },
+                {
+                    "file": "kube-controller-manager.yaml.patch",
+                    "target": "/root"
+                },
+                {
+                    "file": "kube-scheduler.yaml.patch",
+                    "target": "/root"
+                },
+                {
+                    "file": "docker.service.patch",
+                    "target": "/root"
                 }
             ]
         }
