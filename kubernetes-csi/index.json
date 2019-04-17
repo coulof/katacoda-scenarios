@@ -35,23 +35,23 @@
         "assets": {
             "host01": [
                 {
-                    "file": "10-kubeadm.conf.patch",
+                    "file": "10-kubeadm.conf",
                     "target": "/root"
                 },
                 {
-                    "file": "kube-apiserver.yaml.patch",
+                    "file": "kube-apiserver.yaml",
                     "target": "/root"
                 },
                 {
-                    "file": "kube-controller-manager.yaml.patch",
+                    "file": "kube-controller-manager.yaml",
                     "target": "/root"
                 },
                 {
-                    "file": "kube-scheduler.yaml.patch",
+                    "file": "kube-scheduler.yaml",
                     "target": "/root"
                 },
                 {
-                    "file": "docker.service.patch",
+                    "file": "docker.service",
                     "target": "/root"
                 }
             ]
