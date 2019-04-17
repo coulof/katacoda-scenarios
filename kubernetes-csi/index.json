@@ -18,6 +18,10 @@
             {
                 "title": "Step 3 - Configure master services",
                 "text": "step3.md"
+            },
+            {
+                "title": "Step 4 - Use CSI with host path",
+                "text": "step4.md"
             }
         ],
         "intro": {
