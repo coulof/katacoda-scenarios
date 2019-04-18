@@ -15,7 +15,7 @@ spec:
     - kube-apiserver
     - --authorization-mode=Node,RBAC
     - --enable-admission-plugins=Initializers,NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota
-    - --advertise-address=172.17.0.63
+    - --advertise-address=172.17.0.44
     - --allow-privileged=true
     - --client-ca-file=/var/lib/minikube/certs/ca.crt
     - --enable-bootstrap-token-auth=true
@@ -45,7 +45,7 @@ spec:
     livenessProbe:
       failureThreshold: 8
       httpGet:
-        host: 172.17.0.63
+        host: 172.17.0.44
         path: /healthz
         port: 8443
         scheme: HTTPS

@@ -6,7 +6,7 @@ Before moving to the next step we must wait for kubernetes to be fully started
 minikube start \
     --network-plugin=cni \
     --enable-default-cni
-```{{execute interrupt}}
+```{{execute}}
 
 
 We can check the version is 1.13 or greater

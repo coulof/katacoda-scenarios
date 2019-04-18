@@ -4,33 +4,32 @@ In that example we will use (csi driver for host path)[https://github.com/kubern
 
 ## Get the host path provider
 
-```
-wget https://github.com/kubernetes-csi/csi-driver-host-path/archive/master.zip
-unzip master.zip
-```{execute}
+`
+wget https://github.com/kubernetes-csi/csi-driver-host-path/archive/master.zip && unzip master.zip
+`{execute}
 
-```
+`
 sh csi-driver-host-path-master/deploy/kubernetes-1.13/deploy-hostpath.sh
 
-```{execute}
+`{execute}
 
 ## Ensure the different pods are running
 
-```
+`
 kubectl get pods
-```{execute}
+`{execute}
 
 ## Create persistent volumes
 
-```
+`
 kubectl create -f ./examples
-```{execute}
+`{execute}
 
 ## Confirm Hostpath driver works
-```
+`
 kubectl exec -it my-csi-app /bin/sh
-```{execute}
+`{execute}
 
-```
+`
 kubectl exec -it $(kubectl get pods --selector app=csi-hostpathplugin -o jsonpath='{.items[*].metadata.name}') -c hostpath /bin/sh
-```{execute}
+`{execute}
