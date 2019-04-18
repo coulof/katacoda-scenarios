@@ -6,12 +6,12 @@ In that example we will use (csi driver for host path)[https://github.com/kubern
 
 ```
 wget https://github.com/kubernetes-csi/csi-driver-host-path/archive/master.zip
-unzip master
+unzip master.zip
 ```{execute}
 
 ```
-cd
-deploy/kubernetes-1.13/deploy-hostpath.sh
+sh csi-driver-host-path-master/deploy/kubernetes-1.13/deploy-hostpath.sh
+
 ```{execute}
 
 ## Ensure the different pods are running

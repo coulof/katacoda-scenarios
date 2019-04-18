@@ -14,7 +14,7 @@ CSIBlockVolume: true" >> /var/lib/kubelet/config.yaml
 
 ## Update kubelet service
 On startup of kubelet service we also need to set the CSI flags
-`diff /etc/systemd/system/kubelet.service.d/10-kubeadm.conf 10-kubeadm.conf.patch`{{execute}}
+`diff /etc/systemd/system/kubelet.service.d/10-kubeadm.conf 10-kubeadm.conf`{{execute}}
 
 Let's patch the service
 `cp 10-kubeadm.conf /etc/systemd/system/kubelet.service.d/10-kubeadm.conf`{{execute}}

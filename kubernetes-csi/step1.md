@@ -3,7 +3,9 @@ Kubernetes Container Storage Interface is GA since version 1.13.
 ## Check the cluster health is running before moving to the next step
 Before moving to the next step we must wait for kubernetes to be fully started
 ```
-watch minikube status
+minikube start \
+    --network-plugin=cni \
+    --enable-default-cni
 ```{{execute interrupt}}
 
 Once all components are started hit <kbd>Ctrl</kbd>+<kbd>C</kbd>
