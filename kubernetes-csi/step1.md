@@ -1,6 +1,6 @@
 Kubernetes Container Storage Interface is GA since version 1.13.
 
-## Check the cluster health is running before moving to the next step
+## Start kubernetes with minikube
 Before moving to the next step we must wait for kubernetes to be fully started
 ```
 minikube start \
@@ -8,7 +8,6 @@ minikube start \
     --enable-default-cni
 ```{{execute interrupt}}
 
-Once all components are started hit <kbd>Ctrl</kbd>+<kbd>C</kbd>
 
 We can check the version is 1.13 or greater
 ```
