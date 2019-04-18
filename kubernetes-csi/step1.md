@@ -6,9 +6,7 @@ Before moving to the next step we must wait for kubernetes to be fully started
 watch minikube status
 ```{{execute interrupt}}
 
-Once all components are started hit <kbd>Ctrl</kdb>
-+
-<kdb>C</kdb>
+Once all components are started hit <kbd>Ctrl</kbd>+<kbd>C</kbd>
 
 We can check the version is 1.13 or greater
 ```
